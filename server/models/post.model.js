@@ -13,12 +13,12 @@ const findAll = async () => {
     try {
         const result = await pool.query("SELECT * FROM posts");
         debug(result)
-        return result.rows;
+        return result.rows
     } catch (error) {
         console.log(error)
         throw error
     }
-};
+}
 
 const findById = async (id) => {
     try {
@@ -35,14 +35,14 @@ const findById = async (id) => {
 const create = async ({ titulo, img, descripcion }) => {
     try {
         const text = "INSERT INTO posts (titulo, img, descripcion, likes) values ($1, $2, $3, 0) RETURNING *";
-        const result = await pool.query(text, [titulo, img, descripcion]);
+        const result = await pool.query(text, [titulo, img, descripcion])
         debug(result)
-        return result.rows[0];
+        return result.rows[0]
     } catch (error) {
         console.log(error)
         throw error
     }
-};
+}
 
 const update = async (id, { likes }) => {
     try {

@@ -10,7 +10,7 @@ The server provides the following routes:
 - `GET: api/posts/:id` :  Returns a specific post from the database
 - `POST: api/posts` : Allows you to enter a new post
 - `PUT: api/posts/like/:id` : Allows you to increase likes to a post
-- `DELETE: api/posts/:id` : Receives the id of a post and removes it from the database.
+- `DELETE: api/posts/:id` : Receives the id of a post and removes it from the database
 
 <br>
 
